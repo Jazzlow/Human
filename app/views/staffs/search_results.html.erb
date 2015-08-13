@@ -1,0 +1,6 @@
+<% @staffs.each do |staff| %>
+  <div class="article">
+    <h1 class="article-title"><%= link_to staff.FullName, staff %></h1>
+    <p class="article-content"><%= staff.FullName %></p>
+  </div>
+<% end %>

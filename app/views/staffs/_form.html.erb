@@ -1,0 +1,59 @@
+<%= form_for @staff, :html => { :class => "form-horizontal staff" } do |f| %>
+
+    <% if @staff.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@staff.errors.count, "error") %> prohibited this staff from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @staff.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="control-group">
+    <%= f.label :Image_url, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :Image_url, :class => 'form-control' %>
+    </div>
+    <%= error_span(@staff[:Image_url]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :FullName, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :FullName, :class => 'form-control' %>
+    </div>
+    <%= error_span(@staff[:FullName]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :JobTitle, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :JobTitle, :class => 'form-control' %>
+    </div>
+    <%= error_span(@staff[:JobTitle]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :JobDescription, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :JobDescription, :class => 'form-control' %>
+    </div>
+    <%= error_span(@staff[:JobDescription]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :Email, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :Email, :class => 'form-control' %>
+    </div>
+    <%= error_span(@staff[:Email]) %>
+  </div>
+
+
+  <%= f.submit nil, :class => 'btn btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+            staffs_path, :class => 'btn btn-default' %>
+
+<% end %>
