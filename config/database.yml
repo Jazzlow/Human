@@ -41,4 +41,4 @@ production:
   database: production
   username: username
   password: password
-  host: localhost
+  host: 83.212.82.129:3000
