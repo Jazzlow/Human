@@ -10,8 +10,8 @@ get 'index' => 'staffs#index', as: 'index'
 
 root to: 'staffs#index'
 get 'search' => 'staffs#search', as: 'search'
-get 'search_results' => 'staffs#search_results', as: 'search_results'
-
+get 'search_results' => 'staffs#search_results',  as: 'search_results'
+  #get 'search_results' =>    'comments#search_results',  #as: 'search_results'
 
  # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

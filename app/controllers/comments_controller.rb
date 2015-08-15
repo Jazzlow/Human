@@ -1,7 +1,22 @@
 class CommentsController < ApplicationController
   before_action :set_comment, only: [:show, :edit, :update, :destroy]
 
-  # GET /comments
+  
+
+def search_results #Display search results
+if params[:search]
+      @comments = Comment.search(params[:search]).order("created_at DESC")
+    else
+      @comments = Comment.order("created_at DESC")
+    end
+end
+
+
+
+
+
+
+# GET /comments
   # GET /comments.json
   def index
     @comments = Comment.all

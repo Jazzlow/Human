@@ -1,7 +1,24 @@
 class HolidaysController < ApplicationController
   before_action :set_holiday, only: [:show, :edit, :update, :destroy]
 
-  # GET /holidays
+  
+
+
+def search_results #Display search results
+if params[:search]
+      @staffs = Staff.search(params[:search]).order("created_at DESC")
+    else
+      @staffs = Staff.order("created_at DESC")
+    end
+  end
+
+
+
+
+
+
+
+# GET /holidays
   # GET /holidays.json
   def index
     @holidays = Holiday.all

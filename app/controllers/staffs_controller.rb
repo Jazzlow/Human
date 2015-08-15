@@ -11,8 +11,12 @@ if params[:search]
       @staffs = Staff.search(params[:search]).order("created_at DESC")
     else
       @staffs = Staff.order("created_at DESC")
-    end
-  end
+   
+end
+end
+
+
+
 
 
 
@@ -35,7 +39,7 @@ if params[:search]
 
   # GET /staffs/new
   def new
-    @staff = Staff.new
+    @staff = current_admin.staffs.build
   end
 
   # GET /staffs/1/edit
@@ -45,7 +49,7 @@ if params[:search]
   # POST /staffs
   # POST /staffs.json
   def create
-    @staff = Staff.new(staff_params)
+    @staff = current_admin.staffs.build(staff_params)
 
     respond_to do |format|
       if @staff.save
