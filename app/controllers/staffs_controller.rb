@@ -4,7 +4,6 @@ class StaffsController < ApplicationController
   
 
 def search_results #Display search results
-end
 
   @staffs = Staff.search(params[:search])
 end
