@@ -40,7 +40,7 @@
  <td><%= staff.admin.email %></td>
 
         <td>
-          <%if staff.admin == current_admin%>
+          <%if staff.admin == current_admin && staff.admin_id == 1 || staff.admin_id == 3%>
 	<%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_staff_path(staff), :class => 'btn btn-default btn-xs' %>
           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
