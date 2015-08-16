@@ -1,6 +1,15 @@
 class CommentsController < ApplicationController
   before_action :set_comment, only: [:show, :edit, :update, :destroy]
 
+
+
+def search_results #Display search results
+
+  @comments = Comment.search(params[:search])
+end
+
+
+
   
 
 

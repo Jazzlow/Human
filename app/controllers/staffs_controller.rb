@@ -6,13 +6,7 @@ class StaffsController < ApplicationController
 def search_results #Display search results
 end
 
-def search_results #Display search results
-if params[:search]
-      @staffs = Staff.search(params[:search]).order("created_at DESC")
-    else
-      @staffs = Staff.order("created_at DESC")
-   
-end
+  @staffs = Staff.search(params[:search])
 end
 
 
