@@ -1,7 +1,7 @@
 <% @comments.each do |comment| %>
   <div class="article">
-    <h1 class="article-title"><%= link_to comment.FullName, comment%></h1>
-    <p class="article-content"><%= comment.FullName %></p>
+    <h1 class="article-title"><%= link_to comment.full_name, comment%></h1>
+    <p class="article-content"><%= comment.full_name %></p>
   </div>
 <% end %>
 

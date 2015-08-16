@@ -57,17 +57,17 @@
 	
         <div class="navbar-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav">
-<<<<<<< HEAD
+
             <li><%= link_to "Home", root_path  %></li>
-=======
-            <li><%= link_to "Home", "index"  %></li>
->>>>>>> 311efe608732e21bd3f0936e6172725c9b661bc3
+
             <li><%= link_to "sign up", new_admin_registration_path  %></li>
             <li><%= link_to "Search", "search"  %></li>
 	    <li><%= link_to "Sign out", destroy_admin_session_path, :method => :delete%></li>
 	    <li><%= link_to "Sign in", new_admin_session_path%></li>
             <li><%= link_to "Holidays", new_holiday_path%></li>
 	     <li><%= link_to "Comments", new_comment_path%></li>
+	       <li><%= link_to "Search Comments", searach_C_path%></li>
+
 	
 		<% if admin_signed_in? %>
   <div>Signed in as... <%= current_admin.email %></div>

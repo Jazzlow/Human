@@ -94,6 +94,6 @@ end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def staff_params
-      params.require(:staff).permit(:Image_url, :FullName, :JobTitle, :JobDescription, :Email)
+      params.require(:staff).permit(:Image_url, :full_name, :JobTitle, :JobDescription, :Email)
     end
 end

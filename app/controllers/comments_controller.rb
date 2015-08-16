@@ -3,14 +3,6 @@ class CommentsController < ApplicationController
 
   
 
-def search_results #Display search results
-if params[:search]
-      @comments = Comment.search(params[:search]).order("created_at DESC")
-    else
-      @comments = Comment.order("created_at DESC")
-    end
-end
-
 
 
 
@@ -84,6 +76,6 @@ end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def comment_params
-      params.require(:comment).permit(:FullName, :Comment)
+      params.require(:comment).permit(:full_name, :Comment)
     end
 end

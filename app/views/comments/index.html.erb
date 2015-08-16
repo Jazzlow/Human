@@ -6,7 +6,7 @@
   <thead>
     <tr>
       <th><%= model_class.human_attribute_name(:id) %></th>
-      <th><%= model_class.human_attribute_name(:FullName) %></th>
+      <th><%= model_class.human_attribute_name(:full_name) %></th>
       <th><%= model_class.human_attribute_name(:Comment) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
@@ -16,7 +16,7 @@
     <% @comments.each do |comment| %>
       <tr>
         <td><%= link_to comment.id, comment_path(comment) %></td>
-        <td><%= comment.FullName %></td>
+        <td><%= comment.full_name %></td>
         <td><%= comment.Comment %></td>
         <td><%=l comment.created_at %></td>
         <td>
