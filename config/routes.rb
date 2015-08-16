@@ -5,15 +5,28 @@ Rails.application.routes.draw do
   resources :staffs
  
 
-get 'index' => 'staffs#index', as: 'index'
+#get 'index' => 'staffs#index', as: 'index'
 
 
 root to: 'staffs#index'
 get 'search' => 'staffs#search', as: 'search'
 get 'search_results' => 'staffs#search_results',  as: 'search_results'
 get 'search_results_C' =>    'comments#search_results',  as: 'search_results_C'
-get 'search_C' =>    'comments#search',          as: 'searach_C'   
- # The priority is based upon order of creation: first created -> highest priority.
+get 'search_C' =>    'comments#search',       as: 'searach_C'   
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+# The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
